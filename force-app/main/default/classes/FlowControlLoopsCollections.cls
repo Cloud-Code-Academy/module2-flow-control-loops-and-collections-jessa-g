@@ -215,16 +215,13 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static String returnHelloWorld() {
         // Initialize the result String
-        String helloestWorld;
-        Integer i;
+        String helloestWorld = ''; 
         // Use a for loop to append 'Hello World!;' to the result string three times
 
-         for (i = 0; i<3; i++){
-            
+         for (Integer i = 0; i<3; i++){
+            helloestWorld = helloestWorld + 'Hello World!; ';
          }
-
-
-        return null; // Replace null with the variable you used to store the result
+        return helloestWorld; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -239,17 +236,18 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static String repeatString(String inputString, Integer repeatCount) {
         // Initialize the result String
-
+        String helloWorld = '';
+        Integer i;
         // Use a for loop to append the inputString to the result string repeatCount times
-        /*
-        for () {
-
+        for (i = 0; i< repeatCount;i++) {
+            helloWorld = helloWorld + inputString;
+            if (i < (repeatCount - 1)) {
+                helloWorld = helloWorld + '; ';
+            }
             // If it is not the last iteration, add a semicolon to separate the strings
         }
-        */
-
         // Return the final result string
-        return null; // Replace null with the variable you used to store the result
+        return helloWorld; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -260,14 +258,14 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static List<Integer> createAndPopulateList() {
         // Create a new list of integers
-
+        List<Integer> numList = new List<Integer>();
         // Add the integers 1, 2, and 3 to the list
-        // add 1
-        // add 2
-        // add 3
+        numList.add(1);
+        numList.add(2);
+        numList.add(3);
 
         // Return the populated list
-        return null; // Replace null with the variable you used to store the result
+        return numList; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -281,9 +279,9 @@ public with sharing class FlowControlLoopsCollections {
         List<Integer> numberList = new List<Integer>{1, 2, 3, 4, 5}; //DO NOT CHANGE
 
         // Remove the 3rd element (number 3) from the list
-        
+        numberList.remove(2);
         // Return the updated list
-        return null; // Replace null with the variable you used to store the result
+        return numberList; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -295,14 +293,13 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static List<Integer> createIntegerList(Integer n) {
         // Create a new list of integers 
+        List<Integer> integerList = new List<Integer>();
 
-        /*
-        for() {
+        for(Integer i = 1; i<=n; i++) {
             //add integer to the list
+            integerList.add(i);
         }
-        */ 
-
-        return null; // Replace null with the variable you used to store the result
+        return integerList; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -316,10 +313,9 @@ public with sharing class FlowControlLoopsCollections {
     public static Set<String> createStringSet(List<String> inputList) {
         // Create a new Set of strings
         Set<String> stringSet = new Set<String>();
-
         //add strings to the set
-
-        return null; // Replace null with the variable you used to store the result
+        stringSet.addAll(inputList);
+        return stringSet; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -330,12 +326,16 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer sumPositiveIntegers() {
         List<Integer> numbers = new List<Integer>{-1, 2, -3, 4, -5, 6}; //DO NOT CHANGE
-
+        Integer positiveIntegers = 0;
         // Loop through the list of integers
             // if the number is negative skip this iteration
-        
+        for(Integer i = 0; i< numbers.size(); i++){
+            if(numbers.get(i) > 0){
+                positiveIntegers = positiveIntegers + numbers.get(i);
+            }
+        }
 
-        return null; // Replace null with the variable you used to store the result
+        return positiveIntegers; // Replace null with the variable you used to store the result
     }
 
     /**
